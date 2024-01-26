@@ -123,4 +123,34 @@ done
 
 ### Estructura de CRONTAB
 ![](https://github.com/Felipe0408/Imagenes/blob/main/Estructura_Crontab)
+
+
 ### Ejemplo **CONTRAB**
+1. Programe un cron para que se ejecute a las 5 AM Todos los días
+```
+0 5 * * * /scripts/job.sh
+```
+2. Programe un cron para que se ejecute dos veces al día a las 6 AM y a las 6 PM.
+```
+0 6,18 * * * /scripts/job.sh
+```
+3. Programe un cron para que se ejecute cada minuto
+```
+* * * * /scripts/job.sh
+```
+4. Programe un cron para que se ejecute en cada Monday a las 7 PM.
+```
+0 19 * * mon /scripts/job.sh
+```
+5. Programe un cron para que se ejecute cada 15 minutos.
+```
+*/10 * * * * /scripts/job.sh
+```
+6. Programe un cron para que se ejecute en los meses seleccionados
+```
+* * feb,jun,oct * /script/job.sh
+```
+7. Ejecute el script de shell /home/script/backup.sh el 4 de marzo a las 7:25 AM
+```
+25 7 4 3 * /home/script/backup.sh
+```
